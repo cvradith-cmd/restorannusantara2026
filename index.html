@@ -3,9 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Daftar Menu Restoran</title>
+
+    <title>Restoran Nusantara</title>
 
     <style>
+
+        /* ================= BODY ================= */
+
         body {
             font-family: Georgia, serif;
             margin: 0;
@@ -13,33 +17,9 @@
             color: #333;
         }
 
-        /* Header */
-        header {
-            background-color: #6b321d;
-            color: white;
-            text-align: center;
-            padding: 30px;
-        }
-
-        header h1 {
-            margin: 0;
-            font-size: 40px;
-        }
-
-        header p {
-            font-size: 18px;
-            margin-top: 8px;
-            font-style: italic;
-        }
-        
-        body {
-            font-family: Georgia, serif;
-            margin: 0;
-            background-color: #fffaf5;
-            color: #333;
-        }
 
         /* ================= HEADER ================= */
+
         header {
             background-color: #6b321d;
             color: white;
@@ -50,15 +30,19 @@
         header h1 {
             margin: 0;
             font-size: 40px;
+            color: white;
         }
 
         header p {
             font-size: 18px;
             margin-top: 8px;
             font-style: italic;
+            color: white;
         }
 
+
         /* ================= NAVBAR ================= */
+
         nav {
             background-color: #4e2416;
             text-align: center;
@@ -81,11 +65,17 @@
             text-decoration: underline;
         }
 
+
         /* ================= CONTAINER ================= */
+
         .container {
             width: 80%;
             max-width: 900px;
             margin: 30px auto;
+        }
+
+        h1 {
+            color: #7b2d1c;
         }
 
         h2 {
@@ -94,13 +84,19 @@
             padding-bottom: 8px;
         }
 
+        h3 {
+            color: #7b2d1c;
+        }
+
         .pembuka {
             font-size: 18px;
             line-height: 1.7;
             text-align: justify;
         }
 
+
         /* ================= MENU ================= */
+
         .menu {
             background-color: white;
             padding: 20px;
@@ -109,13 +105,35 @@
             box-shadow: 0 2px 8px rgba(0,0,0,0.1);
         }
 
-        .menu ul {
-            padding-left: 25px;
+
+        /* ================= TABLE ================= */
+
+        .table-layout {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background-color: white;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
         }
 
-        .menu li {
-            margin: 12px 0;
-            font-size: 18px;
+        .table-layout th {
+            background-color: #6b321d;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .table-layout td {
+            padding: 14px;
+            border: 1px solid #ead8ca;
+        }
+
+        .table-layout tr:nth-child(even) {
+            background-color: #fff5ed;
+        }
+
+        .table-layout tr:hover {
+            background-color: #f1dfd0;
         }
 
         .harga {
@@ -123,7 +141,51 @@
             color: #8b4513;
         }
 
+
+        /* ================= PROMO ================= */
+
+        .promo-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background-color: white;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .promo-table th {
+            background-color: #7b2d1c;
+            color: white;
+            padding: 15px;
+        }
+
+        .promo-table td {
+            border: 1px solid #ead8ca;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .promo-table tr:nth-child(even) {
+            background-color: #fff5ed;
+        }
+
+        .promo-table tr:hover {
+            background-color: #f1dfd0;
+        }
+
+        .promo {
+            font-weight: bold;
+            color: #7b2d1c;
+        }
+
+        .diskon {
+            font-size: 22px;
+            font-weight: bold;
+            color: #c0392b;
+        }
+
+
         /* ================= VIDEO ================= */
+
         .video-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
@@ -141,7 +203,6 @@
 
         .video-card h3 {
             margin-top: 0;
-            color: #7b2d1c;
         }
 
         .video-card video {
@@ -158,7 +219,54 @@
             line-height: 1.5;
         }
 
+
+        /* ================= PEMESANAN ================= */
+
+        .pemesanan {
+            background-color: white;
+            padding: 25px;
+            margin: 20px 0;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .pemesanan ol {
+            padding-left: 30px;
+        }
+
+        .pemesanan ol li {
+            margin: 15px 0;
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+
+        /* ================= KATEGORI ================= */
+
+        .kategori {
+            background-color: white;
+            padding: 25px;
+            margin: 20px 0;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .kategori ul {
+            padding-left: 30px;
+        }
+
+        .kategori ul li {
+            margin: 10px 0;
+            font-size: 17px;
+        }
+
+        .kategori ul ul {
+            margin-top: 8px;
+        }
+
+
         /* ================= PROFIL & ABOUT ================= */
+
         .info-box {
             background-color: white;
             padding: 25px;
@@ -168,7 +276,9 @@
             line-height: 1.7;
         }
 
+
         /* ================= GALLERY ================= */
+
         .gallery {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -180,7 +290,7 @@
             width: 100%;
             height: 180px;
             object-fit: cover;
-            border-radius: 1px;
+            border-radius: 5px;
             box-shadow: 0 2px 8px rgba(0,0,0,0.15);
         }
 
@@ -189,7 +299,9 @@
             transition: 0.3s;
         }
 
+
         /* ================= KONTAK ================= */
+
         .kontak {
             background-color: #f1dfd0;
             padding: 25px;
@@ -204,7 +316,9 @@
             text-decoration: none;
         }
 
+
         /* ================= ALAMAT ================= */
+
         .alamat {
             background-color: #f1dfd0;
             padding: 20px;
@@ -213,7 +327,9 @@
             font-size: 17px;
         }
 
+
         /* ================= FOOTER ================= */
+
         footer {
             text-align: center;
             background-color: #6b321d;
@@ -222,7 +338,9 @@
             margin-top: 40px;
         }
 
+
         /* ================= RESPONSIVE ================= */
+
         @media (max-width: 700px) {
 
             nav a {
@@ -241,31 +359,70 @@
             .gallery {
                 grid-template-columns: 1fr;
             }
+
+            .container {
+                width: 90%;
+            }
+
+            .table-layout,
+            .promo-table {
+                font-size: 14px;
+            }
+
+            .table-layout th,
+            .table-layout td,
+            .promo-table th,
+            .promo-table td {
+                padding: 8px;
+            }
         }
+
     </style>
 </head>
 
+
 <body>
 
+
     <!-- ================= HEADER ================= -->
+
     <header>
+
         <h1>🍽️ Restoran Nusantara</h1>
-        <p>Lezatnya Rasa, Hangatnya Kebersamaan</p>
+
+        <p>
+            Lezatnya Rasa, Hangatnya Kebersamaan
+        </p>
+
     </header>
 
+
     <!-- ================= NAVBAR ================= -->
+
     <nav>
+
         <a href="#home">Home</a>
+
         <a href="#profil">Profil</a>
+
         <a href="#about">About</a>
+
+        <a href="#promo">Promo</a>
+
         <a href="#gallery">Gallery</a>
+
         <a href="#kontak">Kontak</a>
+
     </nav>
 
 
     <div class="container">
 
-        <!-- ================= HOME ================= -->
+
+        <!-- ================================================= -->
+        <!-- HOME -->
+        <!-- ================================================= -->
+
         <section id="home">
 
             <h1>DAFTAR MENU RESTORAN</h1>
@@ -273,251 +430,858 @@
             <h2>Selamat Datang di Restoran Nusantara</h2>
 
             <p class="pembuka">
-                Selamat datang di Restoran Nusantara. Kami menyediakan
-                berbagai macam makanan dan minuman dengan cita rasa yang
-                lezat dan harga yang terjangkau. Nikmati hidangan terbaik
-                bersama keluarga dan orang-orang tercinta.
+
+                Selamat datang di Restoran Nusantara.
+                Kami menyediakan berbagai macam makanan dan minuman
+                dengan cita rasa yang lezat dan harga yang terjangkau.
+                Nikmati hidangan terbaik bersama keluarga dan
+                orang-orang tercinta.
+
             </p>
 
-            <!-- Informasi Harga -->
+
+            <!-- ================= INFORMASI HARGA ================= -->
+
             <div class="menu">
+
                 <h2>💰 Daftar Harga Menu Restoran</h2>
 
                 <p>
                     Harga menu tersedia dalam mata uang Dollar ($).
                     Contoh mata uang dollar: &dollar;1.
                 </p>
+
             </div>
 
-            <!-- Menu Makanan -->
+
+            <!-- ================================================= -->
+            <!-- MENU MAKANAN MENGGUNAKAN TABLE -->
+            <!-- ================================================= -->
+
             <div class="menu">
 
                 <h2>🍛 Menu Makanan</h2>
 
-                <ul>
-                    <li>Nasi Goreng Spesial - 
-                        <span class="harga">$25</span>
-                    </li>
+                <table class="table-layout">
 
-                    <li>Mie Goreng Jawa - 
-                        <span class="harga">$20</span>
-                    </li>
+                    <tr>
 
-                    <li>Ayam Bakar - 
-                        <span class="harga">$30</span>
-                    </li>
+                        <th>No</th>
 
-                    <li>Ayam Geprek - 
-                        <span class="harga">$22</span>
-                    </li>
+                        <th>Nama Makanan</th>
 
-                    <li>Soto Ayam - 
-                        <span class="harga">$20</span>
-                    </li>
-                </ul>
+                        <th>Deskripsi</th>
+
+                        <th>Harga</th>
+
+                    </tr>
 
 
-                <!-- Video Menu -->
+                    <tr>
+
+                        <td>1</td>
+
+                        <td>🍳 Nasi Goreng Spesial</td>
+
+                        <td>
+                            Nasi goreng dengan bumbu khas Nusantara
+                        </td>
+
+                        <td class="harga">
+                            $25
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>2</td>
+
+                        <td>🍜 Mie Goreng Jawa</td>
+
+                        <td>
+                            Mie goreng dengan bumbu tradisional Jawa
+                        </td>
+
+                        <td class="harga">
+                            $20
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>3</td>
+
+                        <td>🍗 Ayam Bakar</td>
+
+                        <td>
+                            Ayam bakar dengan bumbu rempah khas
+                        </td>
+
+                        <td class="harga">
+                            $30
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>4</td>
+
+                        <td>🌶️ Ayam Geprek</td>
+
+                        <td>
+                            Ayam crispy dengan sambal pedas
+                        </td>
+
+                        <td class="harga">
+                            $22
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>5</td>
+
+                        <td>🍲 Soto Ayam</td>
+
+                        <td>
+                            Soto ayam dengan kuah rempah Nusantara
+                        </td>
+
+                        <td class="harga">
+                            $20
+                        </td>
+
+                    </tr>
+
+                </table>
+
+
+                <!-- ================= VIDEO MAKANAN ================= -->
+
                 <h2>🎥 Video Menu Makanan</h2>
 
                 <div class="video-grid">
 
+
                     <div class="video-card">
+
                         <h3>🍳 Nasi Goreng Spesial</h3>
 
-                        <video controls poster="images/NasiGorengSpesial.jpg">
-                            <source src="video/nasi-goreng.mp4" type="video/mp4">
+                        <video controls
+                               poster="images/NasiGorengSpesial.jpg">
+
+                            <source
+                                src="video/nasi-goreng.mp4"
+                                type="video/mp4">
+
                             Browser Anda tidak mendukung video HTML5.
+
                         </video>
 
                         <p>
                             Video tampilan Nasi Goreng Spesial.
                         </p>
+
                     </div>
 
 
                     <div class="video-card">
+
                         <h3>🍜 Mie Goreng Jawa</h3>
 
-                        <video controls poster="images/MieGorengJawa.jpg">
-                            <source src="video/mie-goreng.mp4" type="video/mp4">
+                        <video controls
+                               poster="images/MieGorengJawa.jpg">
+
+                            <source
+                                src="video/mie-goreng.mp4"
+                                type="video/mp4">
+
                             Browser Anda tidak mendukung video HTML5.
+
                         </video>
 
                         <p>
                             Video tampilan Mie Goreng Jawa.
                         </p>
+
                     </div>
 
 
                     <div class="video-card">
+
                         <h3>🍗 Ayam Bakar</h3>
 
-                        <video controls poster="images/AyamBakar.jpg">
-                            <source src="video/ayam-bakar.mp4" type="video/mp4">
+                        <video controls
+                               poster="images/AyamBakar.jpg">
+
+                            <source
+                                src="video/ayam-bakar.mp4"
+                                type="video/mp4">
+
                             Browser Anda tidak mendukung video HTML5.
+
                         </video>
 
                         <p>
                             Video tampilan Ayam Bakar.
                         </p>
+
                     </div>
 
 
                     <div class="video-card">
+
                         <h3>🌶️ Ayam Geprek</h3>
 
-                        <video controls poster="images/AyamGeprek.png">
-                            <source src="video/ayam-geprek.mp4" type="video/mp4">
+                        <video controls
+                               poster="images/AyamGeprek.png">
+
+                            <source
+                                src="video/ayam-geprek.mp4"
+                                type="video/mp4">
+
                             Browser Anda tidak mendukung video HTML5.
+
                         </video>
 
                         <p>
                             Video tampilan Ayam Geprek.
                         </p>
+
                     </div>
 
 
                     <div class="video-card">
+
                         <h3>🍲 Soto Ayam</h3>
 
-                        <video controls poster="images/SotoAyam.jpg">
-                            <source src="video/soto-ayam.mp4" type="video/mp4">
+                        <video controls
+                               poster="images/SotoAyam.jpg">
+
+                            <source
+                                src="video/soto-ayam.mp4"
+                                type="video/mp4">
+
                             Browser Anda tidak mendukung video HTML5.
+
                         </video>
 
                         <p>
                             Video tampilan Soto Ayam.
                         </p>
+
                     </div>
 
                 </div>
+
             </div>
 
 
-            <!-- Menu Minuman -->
+            <!-- ================================================= -->
+            <!-- MENU MINUMAN MENGGUNAKAN TABLE -->
+            <!-- ================================================= -->
+
             <div class="menu">
 
                 <h2>🥤 Menu Minuman</h2>
 
-                <ul>
+                <table class="table-layout">
 
-                    <li>
-                        Es Teh Manis -
-                        <span class="harga">$4</span>
-                    </li>
+                    <tr>
 
-                    <li>
-                        Es Jeruk -
-                        <span class="harga">$25</span>
-                    </li>
+                        <th>No</th>
 
-                    <li>
-                        Kopi Susu -
-                        <span class="harga">$15</span>
-                    </li>
+                        <th>Nama Minuman</th>
 
-                </ul>
+                        <th>Deskripsi</th>
+
+                        <th>Harga</th>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>1</td>
+
+                        <td>🥤 Es Teh Manis</td>
+
+                        <td>
+                            Teh manis dengan es yang menyegarkan
+                        </td>
+
+                        <td class="harga">
+                            $4
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>2</td>
+
+                        <td>🍊 Es Jeruk</td>
+
+                        <td>
+                            Minuman jeruk segar dengan es
+                        </td>
+
+                        <td class="harga">
+                            $25
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>3</td>
+
+                        <td>☕ Kopi Susu</td>
+
+                        <td>
+                            Kopi dengan campuran susu
+                        </td>
+
+                        <td class="harga">
+                            $15
+                        </td>
+
+                    </tr>
+
+                </table>
 
             </div>
-            <h2>🎥 Video Menu Minuman</h2>
 
-        <div class="video-grid">
 
-            <div class="video-card">
-                <h3> Es Teh Manis</h3>
-                <video controls poster="images/Estehmanis.jpg">
-                    <source src="video/es-teh-manis.mp4" type="video/mp4">
-                    Browser Anda tidak mendukung video HTML5.
-                </video>
-                <p>Video tampilan Es Teh Manis.</p>
+            <!-- ================================================= -->
+            <!-- PROMO RESTORAN MENGGUNAKAN TABLE -->
+            <!-- ================================================= -->
+
+            <section id="promo">
+
+                <h2>🎉 Promo Spesial Restoran</h2>
+
+                <p class="pembuka">
+
+                    Nikmati berbagai promo menarik dari
+                    Restoran Nusantara. Dapatkan makanan favorit
+                    dengan harga lebih hemat.
+
+                </p>
+
+
+                <table class="promo-table">
+
+                    <tr>
+
+                        <th>Promo</th>
+
+                        <th>Menu</th>
+
+                        <th>Diskon</th>
+
+                        <th>Ketentuan</th>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td class="promo">
+                            🔥 Promo Hemat
+                        </td>
+
+                        <td>
+                            Nasi Goreng Spesial
+                        </td>
+
+                        <td class="diskon">
+                            20%
+                        </td>
+
+                        <td>
+                            Minimal pembelian 2 porsi
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td class="promo">
+                            🍗 Paket Keluarga
+                        </td>
+
+                        <td>
+                            Ayam Bakar + Nasi + Es Teh
+                        </td>
+
+                        <td class="diskon">
+                            25%
+                        </td>
+
+                        <td>
+                            Untuk pembelian paket keluarga
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td class="promo">
+                            🥤 Promo Minuman
+                        </td>
+
+                        <td>
+                            Es Teh Manis
+                        </td>
+
+                        <td class="diskon">
+                            10%
+                        </td>
+
+                        <td>
+                            Minimal pembelian 3 gelas
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td class="promo">
+                            🎉 Weekend Special
+                        </td>
+
+                        <td>
+                            Semua Menu
+                        </td>
+
+                        <td class="diskon">
+                            15%
+                        </td>
+
+                        <td>
+                            Berlaku Sabtu dan Minggu
+                        </td>
+
+                    </tr>
+
+                </table>
+
+            </section>
+
+
+            <!-- ================================================= -->
+            <!-- VIDEO MINUMAN -->
+            <!-- ================================================= -->
+
+            <div class="menu">
+
+                <h2>🎥 Video Menu Minuman</h2>
+
+                <div class="video-grid">
+
+
+                    <div class="video-card">
+
+                        <h3>🥤 Es Teh Manis</h3>
+
+                        <video controls
+                               poster="images/Estehmanis.jpg">
+
+                            <source
+                                src="video/es-teh-manis.mp4"
+                                type="video/mp4">
+
+                            Browser Anda tidak mendukung video HTML5.
+
+                        </video>
+
+                        <p>
+                            Video tampilan Es Teh Manis.
+                        </p>
+
+                    </div>
+
+
+                    <div class="video-card">
+
+                        <h3>🍊 Es Jeruk</h3>
+
+                        <video controls
+                               poster="images/EsJeruk.jpg">
+
+                            <source
+                                src="video/es-jeruk.mp4"
+                                type="video/mp4">
+
+                            Browser Anda tidak mendukung video HTML5.
+
+                        </video>
+
+                        <p>
+                            Video tampilan Es Jeruk.
+                        </p>
+
+                    </div>
+
+
+                    <div class="video-card">
+
+                        <h3>☕ Kopi Susu</h3>
+
+                        <video controls
+                               poster="images/KopiSusu.jpg">
+
+                            <source
+                                src="video/kopi-susu.mp4"
+                                type="video/mp4">
+
+                            Browser Anda tidak mendukung video HTML5.
+
+                        </video>
+
+                        <p>
+                            Video tampilan Kopi Susu.
+                        </p>
+
+                    </div>
+
+                </div>
+
             </div>
 
-            <div class="video-card">
-                <h3> Es Jeruk</h3>
-                <video controls poster="images/Esjeruk.jpg">
-                    <source src="video/es-jeruk.mp4" type="video/mp4">
-                    Browser Anda tidak mendukung video HTML5.
-                </video>
-                <p>Video tampilan Es Jeruk.</p>
-            </div>
 
-            <div class="video-card">
-                <h3> Kopi Susu</h3>
-                <video controls poster="images/KopiSusu.jpg">
-                    <source src="video/kopi-susu.mp4" type="video/mp4">
-                    Browser Anda tidak mendukung video HTML5.
-                </video>
-                <p>Video tampilan Kopi Susu.</p>
-            </div>
+            <!-- ================================================= -->
+            <!-- LANGKAH PEMESANAN -->
+            <!-- ================================================= -->
+
+            <section id="pemesanan">
+
+                <h2>📝 Langkah-Langkah Pemesanan Makanan</h2>
+
+                <p class="pembuka">
+
+                    Untuk memudahkan pelanggan dalam melakukan
+                    pemesanan, Restoran Nusantara menyediakan
+                    beberapa langkah sederhana.
+
+                </p>
+
+
+                <div class="pemesanan">
+
+                    <ol>
+
+                        <li>
+
+                            <strong>
+                                Pilih menu makanan dan minuman.
+                            </strong>
+
+                            Pelanggan dapat melihat daftar menu
+                            yang tersedia dan memilih makanan
+                            atau minuman yang diinginkan.
+
+                        </li>
+
+
+                        <li>
+
+                            <strong>
+                                Tentukan jumlah pesanan.
+                            </strong>
+
+                            Tentukan jumlah makanan dan minuman
+                            yang ingin dipesan.
+
+                        </li>
+
+
+                        <li>
+
+                            <strong>
+                                Sampaikan pesanan kepada pelayan.
+                            </strong>
+
+                            Berikan daftar makanan dan minuman
+                            yang telah dipilih kepada pelayan
+                            restoran.
+
+                        </li>
+
+
+                        <li>
+
+                            <strong>
+                                Periksa kembali pesanan.
+                            </strong>
+
+                            Pastikan nama menu, jumlah pesanan,
+                            dan harga sudah sesuai sebelum
+                            pesanan diproses.
+
+                        </li>
+
+
+                        <li>
+
+                            <strong>
+                                Lakukan pembayaran.
+                            </strong>
+
+                            Setelah makanan selesai disiapkan,
+                            pelanggan dapat melakukan pembayaran
+                            sesuai total harga pesanan.
+
+                        </li>
+
+                    </ol>
+
+                </div>
+
+            </section>
+
+
+            <!-- ================================================= -->
+            <!-- KATEGORI MENU -->
+            <!-- ================================================= -->
+
+            <section id="kategori">
+
+                <h2>🍽️ Kategori Menu Restoran</h2>
+
+                <p class="pembuka">
+
+                    Restoran Nusantara memiliki beberapa kategori
+                    menu yang dapat dipilih oleh pelanggan.
+
+                </p>
+
+
+                <div class="kategori">
+
+                    <ul>
+
+                        <li>
+
+                            <strong>🍛 Makanan</strong>
+
+                            <ul>
+
+                                <li>Nasi Goreng Spesial</li>
+
+                                <li>Mie Goreng Jawa</li>
+
+                                <li>Ayam Bakar</li>
+
+                                <li>Ayam Geprek</li>
+
+                                <li>Soto Ayam</li>
+
+                            </ul>
+
+                        </li>
+
+
+                        <li>
+
+                            <strong>🥤 Minuman</strong>
+
+                            <ul>
+
+                                <li>Es Teh Manis</li>
+
+                                <li>Es Jeruk</li>
+
+                                <li>Kopi Susu</li>
+
+                            </ul>
+
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </section>
 
         </section>
 
 
-        <!-- ================= PROFIL ================= -->
+        <!-- ================================================= -->
+        <!-- PROFIL -->
+        <!-- ================================================= -->
+
         <section id="profil">
 
             <h2>👨‍🍳 Profil Restoran</h2>
+
 
             <div class="info-box">
 
                 <h3>Restoran Nusantara</h3>
 
                 <p>
-                    Restoran Nusantara merupakan restoran yang menyajikan
-                    berbagai makanan khas Indonesia dengan cita rasa
-                    tradisional dan modern.
+
+                    Restoran Nusantara merupakan restoran
+                    yang menyajikan berbagai makanan khas
+                    Indonesia dengan cita rasa tradisional
+                    dan modern.
+
                 </p>
 
                 <p>
-                    Kami mengutamakan kualitas bahan makanan, kebersihan,
-                    serta pelayanan yang ramah kepada setiap pelanggan.
+
+                    Kami mengutamakan kualitas bahan makanan,
+                    kebersihan, serta pelayanan yang ramah
+                    kepada setiap pelanggan.
+
                 </p>
 
-                <p>
-                    <strong>Tahun Berdiri:</strong> 2020
-                </p>
 
-                <p>
-                    <strong>Jenis Restoran:</strong> Makanan Nusantara
-                </p>
+                <!-- PROFIL MENGGUNAKAN TABLE -->
+
+                <table class="table-layout">
+
+                    <tr>
+
+                        <th>Informasi</th>
+
+                        <th>Keterangan</th>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>
+                            <strong>Nama Restoran</strong>
+                        </td>
+
+                        <td>
+                            Restoran Nusantara
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>
+                            <strong>Tahun Berdiri</strong>
+                        </td>
+
+                        <td>
+                            2020
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>
+                            <strong>Jenis Restoran</strong>
+                        </td>
+
+                        <td>
+                            Makanan Nusantara
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>
+                            <strong>Konsep</strong>
+                        </td>
+
+                        <td>
+                            Tradisional dan Modern
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>
+                            <strong>Lokasi</strong>
+                        </td>
+
+                        <td>
+                            Jakarta, Indonesia
+                        </td>
+
+                    </tr>
+
+                </table>
 
             </div>
 
         </section>
 
 
-        <!-- ================= ABOUT ================= -->
+        <!-- ================================================= -->
+        <!-- ABOUT -->
+        <!-- ================================================= -->
+
         <section id="about">
 
             <h2>ℹ️ About Us</h2>
 
+
             <div class="info-box">
 
                 <p>
-                    Restoran Nusantara hadir untuk memperkenalkan kekayaan
-                    kuliner Indonesia kepada masyarakat.
+
+                    Restoran Nusantara hadir untuk memperkenalkan
+                    kekayaan kuliner Indonesia kepada masyarakat.
+
                 </p>
 
+
                 <p>
-                    Kami menyediakan berbagai pilihan makanan dan minuman
-                    yang cocok dinikmati bersama keluarga, teman, maupun
-                    rekan kerja.
+
+                    Kami menyediakan berbagai pilihan makanan
+                    dan minuman yang cocok dinikmati bersama
+                    keluarga, teman, maupun rekan kerja.
+
                 </p>
+
 
                 <h3>Visi</h3>
 
                 <p>
-                    Menjadi restoran pilihan yang dikenal karena rasa,
-                    kualitas, dan pelayanan terbaik.
+
+                    Menjadi restoran pilihan yang dikenal
+                    karena rasa, kualitas, dan pelayanan terbaik.
+
                 </p>
+
 
                 <h3>Misi</h3>
 
                 <p>
-                    Menyajikan makanan berkualitas dengan bahan pilihan
-                    serta memberikan pengalaman makan yang nyaman bagi
-                    pelanggan.
+
+                    Menyajikan makanan berkualitas dengan
+                    bahan pilihan serta memberikan pengalaman
+                    makan yang nyaman bagi pelanggan.
+
                 </p>
 
             </div>
@@ -525,27 +1289,36 @@
         </section>
 
 
-        <!-- ================= GALLERY ================= -->
+        <!-- ================================================= -->
+        <!-- GALLERY -->
+        <!-- ================================================= -->
+
         <section id="gallery">
 
             <h2>📸 Gallery</h2>
+
 
             <div class="gallery">
 
                 <img src="images/NasiGorengSpesial.jpg"
                      alt="Nasi Goreng Spesial">
 
+
                 <img src="images/MieGorengJawa.jpg"
                      alt="Mie Goreng Jawa">
+
 
                 <img src="images/AyamBakar.jpg"
                      alt="Ayam Bakar">
 
+
                 <img src="images/AyamGeprek.png"
                      alt="Ayam Geprek">
 
+
                 <img src="images/SotoAyam.jpg"
                      alt="Soto Ayam">
+
 
                 <img src="images/SuasanaResto.jpg"
                      alt="Suasana Restoran">
@@ -555,39 +1328,61 @@
         </section>
 
 
-        <!-- ================= KONTAK ================= -->
+        <!-- ================================================= -->
+        <!-- KONTAK -->
+        <!-- ================================================= -->
+
         <section id="kontak">
 
             <h2>📞 Kontak Kami</h2>
 
+
             <div class="kontak">
 
-                <strong>Restoran Nusantara</strong>
+                <strong>
+                    Restoran Nusantara
+                </strong>
+
 
                 <p>
+
                     📍 Jl. Merdeka No. 10<br>
+
                     Jakarta, Indonesia
+
                 </p>
 
+
                 <p>
+
                     📱 Telepon:
+
                     <a href="tel:+6281234567890">
                         +62 812-3456-7890
                     </a>
+
                 </p>
 
+
                 <p>
+
                     📧 Email:
+
                     <a href="mailto:restorannusantara@email.com">
                         restorannusantara@email.com
                     </a>
+
                 </p>
 
+
                 <p>
+
                     📷 Instagram:
+
                     <a href="#">
                         @restorannusantara
                     </a>
+
                 </p>
 
             </div>
@@ -595,16 +1390,26 @@
         </section>
 
 
-        <!-- ================= ALAMAT ================= -->
+        <!-- ================================================= -->
+        <!-- ALAMAT -->
+        <!-- ================================================= -->
+
         <section>
 
             <h2>📍 Alamat Restoran</h2>
 
+
             <div class="alamat">
 
-                <strong>Restoran Nusantara</strong><br>
+                <strong>
+                    Restoran Nusantara
+                </strong>
 
-                Jl. Merdeka No. 10<br>
+                <br>
+
+                Jl. Merdeka No. 10
+
+                <br>
 
                 Jakarta, Indonesia
 
@@ -615,15 +1420,24 @@
     </div>
 
 
-    <!-- ================= FOOTER ================= -->
+    <!-- ================================================= -->
+    <!-- FOOTER -->
+    <!-- ================================================= -->
+
     <footer>
 
         <strong>
             Selamat menikmati makanan dan minuman kami!
         </strong>
 
-        <br><br>
+        <br>
+        <br>
 
-        &copy; 2026 Restoran Nusantara. Semua Hak Dilindungi.
+        &copy; 2026 Restoran Nusantara.
+        Semua Hak Dilindungi.
 
     </footer>
+
+
+</body>
+</html>
