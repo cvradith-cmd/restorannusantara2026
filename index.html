@@ -339,6 +339,85 @@
         }
 
 
+
+        /* ================= FORM PENDAFTARAN & PEMESANAN ================= */
+        .form-pendaftaran {
+            background-color: white;
+            padding: 25px;
+            margin: 20px 0;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .form-pendaftaran .form-group {
+            margin-bottom: 16px;
+        }
+
+        .form-pendaftaran label {
+            display: block;
+            margin-bottom: 7px;
+            font-weight: bold;
+            color: #4e2416;
+        }
+
+        .form-pendaftaran input[type="text"],
+        .form-pendaftaran input[type="tel"],
+        .form-pendaftaran input[type="date"],
+        .form-pendaftaran input[type="number"],
+        .form-pendaftaran input[type="email"],
+        .form-pendaftaran select,
+        .form-pendaftaran textarea {
+            width: 100%;
+            padding: 11px;
+            box-sizing: border-box;
+            border: 1px solid #c9aa96;
+            border-radius: 5px;
+            background-color: #fffaf5;
+            color: #333;
+            font-family: Georgia, serif;
+        }
+
+        .form-pendaftaran .opsi {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px 20px;
+            margin-top: 8px;
+        }
+
+        .form-pendaftaran .opsi label {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            margin: 0;
+            font-weight: normal;
+        }
+
+        .form-pendaftaran button {
+            background-color: #6b321d;
+            color: white;
+            border: none;
+            padding: 12px 22px;
+            border-radius: 5px;
+            font-family: Georgia, serif;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .form-pendaftaran button:hover {
+            background-color: #4e2416;
+        }
+
+        .catatan-form {
+            font-size: 14px;
+            line-height: 1.6;
+            color: #6b321d;
+            background-color: #fff5ed;
+            border-left: 4px solid #c58b62;
+            padding: 12px;
+            margin-top: 18px;
+        }
+
         /* ================= RESPONSIVE ================= */
 
         @media (max-width: 700px) {
@@ -410,6 +489,8 @@
         <a href="#promo">Promo</a>
 
         <a href="#gallery">Gallery</a>
+
+        <a href="#form-pendaftaran">Pemesanan</a>
 
         <a href="#kontak">Kontak</a>
 
@@ -1120,6 +1201,111 @@
 
         </section>
 
+
+
+        <!-- ================================================= -->
+        <!-- FORM PENDAFTARAN DAN PEMESANAN -->
+        <!-- ================================================= -->
+        <section id="form-pendaftaran">
+            <h2>📝 Form Pendaftaran & Pemesanan</h2>
+            <p class="pembuka">
+                Silakan isi data diri dan detail pemesanan di bawah ini.
+                Pastikan informasi yang dimasukkan sudah benar.
+            </p>
+
+            <div class="form-pendaftaran">
+                <form action="#" method="post">
+                    <div class="form-group">
+                        <label for="nama-pelanggan">Nama Lengkap</label>
+                        <input type="text" id="nama-pelanggan" name="nama_pelanggan"
+                               placeholder="Masukkan nama lengkap" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email-pelanggan">Email</label>
+                        <input type="email" id="email-pelanggan" name="email"
+                               placeholder="contoh@email.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="nohp-pelanggan">Nomor HP</label>
+                        <input type="tel" id="nohp-pelanggan" name="nohp"
+                               placeholder="Masukkan nomor HP" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="tanggal-booking">Tanggal Booking</label>
+                        <input type="date" id="tanggal-booking" name="tanggal_booking" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="paket">Pilih Paket</label>
+                        <select id="paket" name="paket" required>
+                            <option value="">-- Pilih paket --</option>
+                            <option value="Paket Makanan">Paket Makanan</option>
+                            <option value="Paket Minuman">Paket Minuman</option>
+                            <option value="Paket Makanan dan Minuman">Paket Makanan dan Minuman</option>
+                            <option value="Paket Keluarga">Paket Keluarga</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Kategori Menu</label>
+                        <div class="opsi">
+                            <label><input type="checkbox" name="kategori[]" value="Makanan"> Makanan</label>
+                            <label><input type="checkbox" name="kategori[]" value="Minuman"> Minuman</label>
+                            <label><input type="checkbox" name="kategori[]" value="Dessert"> Dessert</label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="jumlah-item">Jumlah Item</label>
+                        <input type="number" id="jumlah-item" name="jumlah_item"
+                               min="1" placeholder="Masukkan jumlah item" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Metode Pembayaran</label>
+                        <div class="opsi">
+                            <label><input type="radio" name="metode_pembayaran" value="Kartu Debit/Kredit" required> 💳 Kartu Debit/Kredit</label>
+                            <label><input type="radio" name="metode_pembayaran" value="Dompet Digital"> 📱 Dompet Digital</label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="nomor-kartu">Nomor Kartu (jika memilih kartu)</label>
+                        <input type="text" id="nomor-kartu" name="nomor_kartu"
+                               inputmode="numeric" autocomplete="off"
+                               placeholder="Masukkan nomor kartu bila diperlukan">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="dompet-digital">Dompet Digital (jika memilih dompet digital)</label>
+                        <select id="dompet-digital" name="dompet_digital">
+                            <option value="">-- Pilih dompet digital --</option>
+                            <option value="GoPay">GoPay</option>
+                            <option value="OVO">OVO</option>
+                            <option value="DANA">DANA</option>
+                            <option value="ShopeePay">ShopeePay</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="catatan">Catatan Pesanan (opsional)</label>
+                        <textarea id="catatan" name="catatan" rows="3"
+                                  placeholder="Contoh: tidak pedas atau permintaan khusus"></textarea>
+                    </div>
+
+                    <button type="submit">Kirim Pemesanan</button>
+
+                    <p class="catatan-form">
+                        Catatan: form HTML ini merupakan tampilan antarmuka. Agar data benar-benar tersimpan
+                        atau terkirim, perlu dihubungkan ke backend atau layanan formulir. Jangan memasukkan
+                        nomor kartu asli ke halaman demo ini.
+                    </p>
+                </form>
+            </div>
+        </section>
 
         <!-- ================================================= -->
         <!-- PROFIL -->
